@@ -7,8 +7,8 @@ To implement the given logic function using NAND and NOR gates and to verify its
 F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate
 ## Equipments Required:
-## Hardware – PCs, Cyclone II , USB flasher
-## Software – Quartus prime
+ Hardware – PCs, Cyclone II , USB flasher
+ Software – Quartus prime
 
 
 ## Theory
@@ -28,12 +28,52 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
 ## Logic Diagram
 ## Procedure
+
+### STEP 1:
+
+Create a project with required entities.
+### STEP 2:
+
+Create a module along with respective file name.
+### STEP 3:
+
+Run the respective programs for the given boolean equations.
+### STEP 4:
+
+Run the module and get the respective RTL outputs.
+### STEP 5:
+
+Create university program(VWF) for getting timing diagram.
+### STEP 6:
+
+Give the respective inputs for timing diagram and obtain the results.
 ## Program:
-/*
-Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+### Using NANAD gate
+```
+   module exp1(a,b,c,d,f);
+   input a,b,c,d;
+   output f;
+   wire p,q,r;
+   assign p=(~c & b & a);
+   assign q=(~d & c & ~a);
+   assign r=(c & ~b & a);
+   assign f=(~(~p & ~q & ~r));
+   endmodule
+```
+### Using NOR gate
+```
+   module exp2(a,b,c,d,f);
+   input a,b,c,d;
+   output f;
+   wire p,q,r;
+   assign p=( c & ~b & a);
+   assign q=( d & ~c & a);
+   assign r=( c & ~b & a);
+   assign f=(~(~( p | q | r)));
+   endmodule
+```   
+
 ## RTL realization
 
 ## Output:
