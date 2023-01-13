@@ -2,6 +2,9 @@
 Implementation of combinational logic using universal-gates
  
 ## AIM:
+REF NO: 22008681
+Namme : A.THIYAGARAJAN
+
 To implement the given logic function using NAND and NOR gates and to verify its operation in Quartus using Verilog programming.
 
 F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate
