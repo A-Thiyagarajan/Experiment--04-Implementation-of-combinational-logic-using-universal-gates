@@ -19,14 +19,13 @@ NAND gate is actually a combination of two logic gates i.e. AND gate followed by
 
 F=((C'.B.A)'(D'.C.A)'(C.B'.A)')'
 
-## Logic Diagram
+## Using NOR gates
 
 Using NOR gates
 NOR gate is actually a combination of two logic gates: OR gate followed by NOT gate. So its output is complement of the output of an OR gate. This gate can have minimum two inputs, output is always one. By using only NOR gates, we can realize all logic functions: AND, OR, NOT, Ex-OR, Ex-NOR, NAND. So this gate is also called universal gate. Designing a circuit with NOR gates only uses the same basic techniques as designing a circuit with NAND gates; that is, the application of deMorgan’s theorem. The only difference between NOR gate design and NAND gate design is that the former must eliminate product terms and the later must eliminate sum terms.
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram
 ## Procedure
 
 ### STEP 1:
@@ -74,10 +73,25 @@ Give the respective inputs for timing diagram and obtain the results.
    endmodule
 ```   
 
-## RTL realization
-
 ## Output:
-## RTL
-## Timing Diagram
+## Using NAND gate 
+### RTL
+![using nand gate](https://user-images.githubusercontent.com/118707693/212377032-ae0d476f-5520-4bc7-ad22-64f95e78142d.png)
+
+### Timing Diagram
+![using nand td](https://user-images.githubusercontent.com/118707693/212377080-d78e1bb8-81b1-4704-9dd7-af5153db8d60.png)
+
+### Trutn table
+![using nand truth table](https://user-images.githubusercontent.com/118707693/212377127-5be10913-2d84-4c37-b480-cfad337e0be2.png)
+
+## Using NOR gate
+### RTL
+![using nor gate](https://user-images.githubusercontent.com/118707693/212377203-0cd78877-485f-4b77-bf6d-5054aeef1e23.png)
+
+### Timing diagram
+![using nor gate td](https://user-images.githubusercontent.com/118707693/212377263-78b618f8-736b-4afc-bb1b-83c8c7a9fb70.png)
+## Truth table
+![using nor truth table](https://user-images.githubusercontent.com/118707693/212377324-4339640e-812b-4463-8fa2-1c10472d0135.png)
+
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
